@@ -1,6 +1,33 @@
 module.exports = {
-  siteMetadata: {
-    title: 'Gatsby Default Starter',
-  },
-  plugins: ['gatsby-plugin-react-helmet'],
+	siteMetadata: {
+		title: 'Jon Bukiewicz',
+	},
+	plugins: [
+		'gatsby-plugin-react-helmet',
+		'gatsby-plugin-offline',
+		'gatsby-transformer-sharp',
+		'gatsby-plugin-sharp',
+		{
+			resolve: 'gatsby-plugin-google-analytics',
+			options: {
+				trackingId: '',
+			}
+		},
+		{
+			resolve: 'gatsby-plugin-typography',
+			options: {
+				pathToConfigModule: 'src/utils/typography.js'
+			}
+		},
+		{
+			resolve: 'gatsby-source-wordpress',
+			options: {
+				baseUrl: 'ec2-13-58-199-98.us-east-2.compute.amazonaws.com',
+				hostingWPCOM: false,
+				protocol: 'http',
+				useACF: false,
+				verboseOutput: false
+			}
+		}
+	],
 };
