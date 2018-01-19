@@ -4,6 +4,15 @@ module.exports = {
 	},
 	plugins: [
 		'gatsby-plugin-react-helmet',
+		'gatsby-plugin-offline',
+		'gatsby-transformer-sharp',
+		'gatsby-plugin-sharp',
+		{
+			resolve: 'gatsby-plugin-google-analytics',
+			options: {
+				trackingId: '',
+			}
+		},
 		{
 			resolve: 'gatsby-plugin-typography',
 			options: {
