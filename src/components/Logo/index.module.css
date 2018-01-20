@@ -1,0 +1,10 @@
+.logo {
+    width: 120px;
+    height: 120px;
+}
+
+.logo path {
+    fill: white;
+    height: 100%;
+    width: 100%;
+}
