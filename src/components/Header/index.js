@@ -1,11 +1,11 @@
 import React from 'react'
 import Logo from '../Logo'
-import styles from './index.module.css'
+import styles from './header.module.css'
 
 const Header = () => (
-  <div className={styles.header}>
+  <header className={styles.header}>
     <Logo />
-  </div>
+  </header>
 )
 
 export default Header
