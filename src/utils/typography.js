@@ -23,4 +23,4 @@ const typography = new Typography({
 	includeNormalize: false
 });
 
-export default typography;
+module.exports = typography

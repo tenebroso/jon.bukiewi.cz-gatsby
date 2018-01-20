@@ -1,0 +1,14 @@
+.pageWrap {
+    max-width: 480px;
+}
+
+.title {
+    font-size: 14px;
+    position: relative;   
+}
+
+.content {
+    border-top: 2px solid rgba(223, 223, 223, 0.75);
+    margin: 10px 0 0;
+    padding: 20px 0 20px;
+}

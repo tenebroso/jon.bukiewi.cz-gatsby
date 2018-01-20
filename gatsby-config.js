@@ -1,3 +1,6 @@
+const env = process.env.NODE_ENV || 'development';
+require('dotenv').config({path: `./.env.${env}`}); 
+
 module.exports = {
 	siteMetadata: {
 		title: 'Jon Bukiewicz',
@@ -26,7 +29,12 @@ module.exports = {
 				hostingWPCOM: false,
 				protocol: 'http',
 				useACF: false,
-				verboseOutput: false
+				verboseOutput: false,
+				auth: {
+					htaccess_user: process.env.HTACCESS_USER,
+					htaccess_pass: process.env.HTACCESS_PASS,
+					htaccess_sendImmediately: false,
+				}
 			}
 		}
 	],
