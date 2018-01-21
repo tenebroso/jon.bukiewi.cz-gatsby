@@ -20,8 +20,7 @@ const TemplateWrapper = ({ children }) => (
         display: 'flex',
         margin: '0 auto',
         maxWidth: 1200,
-        padding: '0px 1.0875rem 1.45rem 50px',
-        paddingTop: 0,
+        padding: '20vh 0 0 50px',
         width: '90%'
       }}
     >

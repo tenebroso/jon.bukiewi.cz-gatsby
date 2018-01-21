@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import styles from "../components/page.module.css"
-import { rhythm } from "../utils/typography"
 
 import Helmet from "react-helmet"
 
