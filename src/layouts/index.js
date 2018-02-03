@@ -19,12 +19,6 @@ const TemplateWrapper = ({ children }) => (
     <div
       className={styles.siteWrap}
     >
-      <ul className="nav">
-        <li><a href="/about">About</a></li>
-        <li><a>Blog</a></li>
-        <li><a>Projects</a></li>
-        <li><a>Contact</a></li>
-      </ul>
       {children()}
     </div>
   </div>

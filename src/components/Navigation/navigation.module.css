@@ -1,0 +1,59 @@
+.nav,
+.icons {
+	list-style-type: none;
+    margin: 0;
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2rem;
+}
+
+.nav li,
+.icons li {
+	margin: 0;
+}
+
+.icons li a {
+    color: white;
+    display: block;
+    font-size: 2rem;
+    padding: 0 10px;
+}
+
+.icons li a:after {
+    display: none;
+}
+
+.navLink {
+	color: white;
+    cursor: pointer;
+    display: inline-block;
+	font-size: 2rem;
+    margin: .75rem 0;
+    overflow: hidden;
+    padding: .25em 0;
+    position: relative;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+
+.navLink:after {
+    border-width: 2px;
+    bottom: auto;
+    left: 0;
+    position: absolute;
+    top: 51%;
+    transform: translate(-110%, 0);
+    transition: transform .35s ease-in-out;
+}
+
+.isHovered:hover {
+    color: white;
+}
+
+.isHovered:hover:after {
+    transform: translate(0, 0);
+}

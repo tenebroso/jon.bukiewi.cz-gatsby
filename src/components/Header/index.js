@@ -1,20 +1,21 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Logo from '../Logo'
+import Navigation from '../Navigation'
 import styles from './header.module.css'
 
 class Header extends Component {
   constructor(props) {
-    super(props);
-    this.toggleSlide = this.toggleSlide.bind(this);
-    this.handleHover = this.handleHover.bind(this);
+    super(props)
+    this.toggleSlide = this.toggleSlide.bind(this)
+    this.handleHover = this.handleHover.bind(this)
     this.state = {
       isActive: false,
       isHovered: false
-    };
+    }
   }
 
   toggleSlide() {
-    this.setState({ isActive: !this.state.isActive });
+    this.setState({ isActive: !this.state.isActive })
   }
 
   handleHover() {
@@ -30,7 +31,7 @@ class Header extends Component {
         onMouseEnter={this.handleHover}
         onMouseLeave={this.handleHover}>
       <div className={styles.pullDown}>
-        <p>Stuff in here.</p>
+        <Navigation />
       </div>
       <Logo handleClick={this.toggleSlide} handleHover={this.handleHover} />
     </header>

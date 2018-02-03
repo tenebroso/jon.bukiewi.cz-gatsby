@@ -67,10 +67,6 @@ a:after {
     width: 100%;
 }
 
-a:hover {
-	color: rgba(126, 126, 126, 0.75);
-}
-
 img {
 	height: auto;
 	max-width: 100%;
@@ -107,31 +103,4 @@ textarea {
 
 [hidden] {
 	display: none !important;
-}
-
-
-.nav {
-	list-style-type: none;
-	margin: 0 60px 0 0;
-}
-
-.nav li {
-	margin: 0;
-}
-
-.nav a {
-	color: black;
-	cursor: pointer;
-	display: block;
-	font-size: 2rem;
-	padding: 0 0 1.5rem;
-	text-decoration: none;
-}
-
-.nav a:after {
-	display: none;
-}
-
-.nav a:hover {
-	color: #c1b581;
 }
