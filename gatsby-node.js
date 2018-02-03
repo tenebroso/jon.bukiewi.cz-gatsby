@@ -104,5 +104,43 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 		})
 	  })
 	// ==== END POSTS ====
+
+	// ==== PROJECTS (WORDPRESS NATIVE AND ACF) ====
+	.then(() => {
+		graphql(
+		  `
+			{
+			  allWordpressWpProjects {
+				edges {
+				  node {
+						id
+						slug
+				  	}
+				}
+			  }
+			}
+		  `
+		).then(result => {
+		  if (result.errors) {
+			console.log(result.errors)
+			reject(result.errors)
+		  }
+		  const projectTemplate = path.resolve(`./src/templates/project.js`)
+		  // We want to create a detailed page for each
+		  // post node. We'll just use the Wordpress Slug for the slug.
+		  // The Post ID is prefixed with 'POST_'
+		  _.each(result.data.allWordpressWpProjects.edges, edge => {
+			createPage({
+			  path: '/projects/' + edge.node.slug,
+			  component: slash(projectTemplate),
+			  context: {
+				id: edge.node.id,
+			  },
+			})
+		  })
+		  resolve()
+		})
+	  })
+	// ==== END PROJECTS ====
   })
 }
