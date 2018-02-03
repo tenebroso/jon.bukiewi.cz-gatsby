@@ -14,7 +14,8 @@
     "gatsby-plugin-typography": "^1.7.13",
     "gatsby-source-wordpress": "^2.0.52",
     "gatsby-transformer-sharp": "^1.6.17",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-icons": "^2.2.7"
   },
   "keywords": [
     "gatsby"
