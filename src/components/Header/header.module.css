@@ -1,18 +1,24 @@
 .header {
+    background-color: tarnsparent;
     left: 0;
     overflow: hidden;
     padding: 0 0 20px 0;
     position: absolute;
     top: 0;
-    transition: transform .35s ease-in-out;
+    transition: transform .35s ease-in-out, background-color .35s ease;
     transform: translate(0, calc(20px - 100vh));
     width: 100%;
     z-index: 40;
 }
 
+.isHovered {
+    will-change: transform;
+}
+
 .activeHeader {
+    background-color: white;
     overflow: visible;
-    transform: translate(0, -10%);
+    transform: translate(0, -5%);
 }
 
 .pullDown {

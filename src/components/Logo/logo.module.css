@@ -24,11 +24,11 @@
     display: none;
 }
 
-.link:hover {
+.isHovered {
     transform: translate(0, 10px);
 }
 
-.link:hover .logo {
+.isHovered .logo {
     transform: rotate(90deg);
 }
 

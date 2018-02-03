@@ -9,7 +9,7 @@ class PageTemplate extends Component {
     const currentPage = this.props.data.wordpressPage
 
     return (
-      <div className={styles.pageWrap}>
+      <div className={styles.contentWrap}>
         <h1 className={styles.title}>
           <span className={styles.titleWrap} dangerouslySetInnerHTML={{ __html: currentPage.title }} />
         </h1>

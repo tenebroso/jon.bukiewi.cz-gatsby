@@ -1,6 +1,6 @@
 .title {
-    font-size: 14px;
-    margin: 20px 0 0;
+    font-size: 12px;
+    margin: 15px 0 0;
 }
 
 .subTitle {
@@ -9,6 +9,13 @@
 
 .location {
     display: none;
+}
+
+@media (min-width: 370px) {
+    .title {
+        font-size: 14px;
+        margin: 20px 0 0;
+    }
 }
 
 @media (min-width: 550px){

@@ -1,10 +1,9 @@
 .pageWrap {
-    max-width: 480px;
+    
 }
 
-.title {
-    font-size: 14px;
-    position: relative;   
+.contentWrap {
+    max-width: 480px;
 }
 
 .content {

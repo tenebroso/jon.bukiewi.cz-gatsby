@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
 import './index.css'
+import styles from './index.module.css'
 
 const TemplateWrapper = ({ children }) => (
   <div>
@@ -16,13 +17,7 @@ const TemplateWrapper = ({ children }) => (
     />
     <Header />
     <div
-      style={{
-        display: 'flex',
-        margin: '0 auto',
-        maxWidth: 1200,
-        padding: '20vh 0 0 50px',
-        width: '90%'
-      }}
+      className={styles.siteWrap}
     >
       <ul className="nav">
         <li><a href="/about">About</a></li>

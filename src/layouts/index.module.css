@@ -1,0 +1,14 @@
+
+.siteWrap {
+	display: flex;
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 20vh 0 0 5px;
+	width: 90%;
+}
+
+@media (max-width: 600px) {
+	.siteWrap {
+		flex-direction: column;
+	}
+}
