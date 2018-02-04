@@ -12,10 +12,8 @@ const Projects = ({ data }) => (
         <div key={node.id} className="post">
           <Link to={`${node.slug}`}>
             <h3 className="post-title">{node.title}</h3>
+            {node.acf.subtitle}
           </Link>
-          <div className="divider"></div>
-          <div className="excerpt" dangerouslySetInnerHTML={{ __html: node.content }} />
-          <img src={node.featured_media.source_url} />
         </div>
       ))}
     </div>
@@ -30,11 +28,10 @@ export const projectsQuery = graphql`
       edges {
         node {
           id
-		  slug
+		      slug
           title
-          content
-          featured_media {
-            source_url
+          acf {
+            subtitle
           }
         }
       }

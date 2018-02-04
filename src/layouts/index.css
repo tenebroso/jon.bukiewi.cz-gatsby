@@ -51,6 +51,12 @@ blockquote {
 	margin: 0 0 1rem;
 }
 
+hr {
+	border-top: 1px solid #c1b581;
+	margin: 0 auto 1rem;
+	width: 2rem;
+}
+
 a {
 	color: rgba(61, 61, 61, 0.75);;
 	position: relative;
