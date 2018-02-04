@@ -9,7 +9,7 @@ module.exports = {
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-offline',
 		'gatsby-transformer-sharp',
-		//'gatsby-plugin-sharp',
+		'gatsby-plugin-sharp',
 		{
 			resolve: 'gatsby-plugin-google-analytics',
 			options: {
