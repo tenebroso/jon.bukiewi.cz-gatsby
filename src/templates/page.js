@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-import styles from "../components/page.module.css"
 
 import Helmet from "react-helmet"
 
@@ -9,11 +8,11 @@ class PageTemplate extends Component {
     const currentPage = this.props.data.wordpressPage
 
     return (
-      <div className={styles.contentWrap}>
-        <h1 className={styles.title}>
-          <span className={styles.titleWrap} dangerouslySetInnerHTML={{ __html: currentPage.title }} />
-        </h1>
-        <div className={styles.content} dangerouslySetInnerHTML={{ __html: currentPage.content }} />
+      <div className="siteWrap">
+        <div className="pageHeader">
+          <h1 className="pageTitle" dangerouslySetInnerHTML={{ __html: currentPage.title }} />
+        </div>
+        <div dangerouslySetInnerHTML={{ __html: currentPage.content }} />
       </div>
     )
   }

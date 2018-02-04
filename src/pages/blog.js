@@ -1,29 +1,21 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import ClockIcon from "react-icons/lib/fa/clock-o"
-
 import { format } from 'date-fns'
+import styles from './blog.module.css'
 
 const Blog = ({ data }) => (
-  <div className="blog page-wrap">
-    <h1 className="page-title">Blog</h1>
-    <div className="blog-post-list">
+  <div className="siteWrap">
+    <div className="pageHeader">
+      <h1 className="pageTitle">Blog</h1>
+    </div>
       {data.allWordpressPost.edges.map(({ node }) => (
-        <div key={node.id} className="post">
+        <div key={node.id} className={styles.post}>
           <Link to={`${node.slug}`}>
-            <h3 className="post-title">{node.title}</h3>
+            <h3 className={styles.title} dangerouslySetInnerHTML={{ __html: node.title }} />
+            <div className={styles.date}>{format(new Date(node.date), ("MMM DD, YYYY"))}</div>
           </Link>
-          <div className="divider"></div>
-          <div className="date-wrap">
-            <Link to={`blog/${node.slug}`}>
-              <ClockIcon />
-              <div className="date">{format(new Date(node.date), ("MMM DD, YYYY"))}</div>
-            </Link>
-          </div>
-          <div className="excerpt" dangerouslySetInnerHTML={{ __html: node.excerpt }} />
         </div>
       ))}
-    </div>
   </div>
 )
 
@@ -36,7 +28,6 @@ export const pageQuery = graphql`
         node {
           id
           title
-          excerpt
           slug
           date
         }

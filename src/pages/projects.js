@@ -1,22 +1,26 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Link from 'gatsby-link'
-import ClockIcon from "react-icons/lib/fa/clock-o"
-
-import { format } from 'date-fns'
+import styles from './projects.module.css'
 
 const Projects = ({ data }) => (
-  <div className="blog page-wrap">
-    <h1 className="page-title">Projects</h1>
-    <div className="blog-post-list">
+  <div className={styles.projects}>
+    <div className="pageHeader">
+      <h1 className="pageTitle">Projects</h1>
+    </div>
       {data.allWordpressWpProjects.edges.map(({ node }) => (
-        <div key={node.id} className="post">
+        <div key={node.id} className={styles.project}>
           <Link to={`${node.slug}`}>
-            <h3 className="post-title">{node.title}</h3>
-            {node.acf.subtitle}
+            <div className={styles.bg} style={{
+                backgroundImage: 'url(' + node.featured_media.source_url + ')'
+            }}>
+              <div className={styles.titleWrap}>
+                <h3 className={styles.title}>{node.title}</h3>
+                <p className={styles.subtitle}>{node.acf.subtitle}</p>
+              </div>
+            </div>
           </Link>
         </div>
       ))}
-    </div>
   </div>
 )
 
@@ -30,6 +34,9 @@ export const projectsQuery = graphql`
           id
 		      slug
           title
+          featured_media {
+            source_url
+          }
           acf {
             subtitle
           }
