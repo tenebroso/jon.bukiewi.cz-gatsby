@@ -1,5 +1,5 @@
 .projects {
-    padding: 15vh 0 5vh 5px;
+    padding: 15vh 0 5vh;
 }
 
 .bg {
@@ -26,7 +26,8 @@
 }
 
 .title {
-    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    font-size: 2.5rem;
     margin: 0;
 }
 
@@ -34,4 +35,16 @@
     color: #c1b581;
     font-size: .75rem;
     margin: 0;
+}
+
+@media (max-width: 480px) {
+    .bg {
+        height: 100vh;
+    }
+    .titleWrap {
+        padding: 0 1rem;
+    }
+    .title {
+        font-size: 2rem;
+    }
 }

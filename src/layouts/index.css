@@ -117,7 +117,7 @@ textarea {
 	display: flex;
 	flex-direction: column;
 	margin: 0 auto;
-	max-width: 1200px;
+	max-width: 640px;
 	padding: 15vh 0 5vh 5px;
 	width: 90%;
 }
@@ -129,7 +129,7 @@ textarea {
 
 .pageHeader {
     margin: 0 auto 1rem;
-    max-width: 1200px;
+    max-width: 640px;
     width: 90%;
 }
 
