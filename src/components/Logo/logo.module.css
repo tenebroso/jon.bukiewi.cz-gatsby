@@ -7,7 +7,7 @@
 }
 
 .link {
-    background: rgba(0, 0, 0, 1);
+    background: rgb(20, 20, 20);
     border-radius: 50%;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
@@ -36,3 +36,5 @@
     transition: transform .35s ease-in-out;
     transform: translate3d(0, 0, 0); 
 }
+
+@media (max-width: )

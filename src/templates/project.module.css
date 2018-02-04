@@ -1,0 +1,62 @@
+.headerImage {
+    position: absolute;
+}
+
+.siteWrap {
+    padding: 0;
+}
+
+.header {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    transform: translate(0, 0);
+    width: 100%;
+    z-index: 0;
+}
+
+.header:after {
+    background: rgba(255,255,255,.85);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.headerTitle {
+    color: rgb(0,0,0);
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 20;
+}
+
+.title {
+    display: inline;
+    font-size: 4rem;
+    margin: 0;
+    position: relative;
+    z-index: 45;
+}
+
+.title:after {
+    border:2px solid #c1b581;
+    content: "";
+    left: 50%;
+    margin-left: -2rem;
+    position: absolute;
+    top: -.5rem;
+    transform: translate(0, 0);
+    transition: transform .35s ease-in-out;
+    width: 4rem;
+    z-index: -1;
+}
