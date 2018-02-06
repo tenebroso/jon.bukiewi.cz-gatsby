@@ -1,19 +1,24 @@
-.nav,
-.icons {
+.nav {
 	list-style-type: none;
     margin: 0;
     text-align: center;
+}
+
+.nav li {
+    margin: 0;
 }
 
 .icons {
     display: flex;
     justify-content: space-around;
     padding-top: 2rem;
+    list-style-type: none;
+    margin: 0;
+    text-align: center;
 }
 
-.nav li,
 .icons li {
-	margin: 0;
+    margin: 0;
 }
 
 .icons li a {
