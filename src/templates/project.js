@@ -9,7 +9,7 @@ class ProjectTemplate extends Component {
     return (
       <div>
         <div className={styles.header} style={{
-                backgroundImage: 'url(' + project.featured_media.source_url + ')'
+                backgroundImage: 'url(' + project.featured_media.localFile.childImageSharp.resize.src + ')'
             }}>
             <div className={styles.headerTitle}>
                 <h1 className={styles.title} dangerouslySetInnerHTML={{ __html: project.title }} />
@@ -23,7 +23,7 @@ class ProjectTemplate extends Component {
             </div>
 
             <div className={styles.row}>
-                <img src={project.acf.laptop_image.source_url} />  
+                <img src={project.acf.laptop_image.localFile.childImageSharp.resize.src} />  
             </div>
 
             <div className={styles.row}>
@@ -31,7 +31,7 @@ class ProjectTemplate extends Component {
                     <h3 className={styles.heading}>Services</h3>
                     <div className={styles.list} dangerouslySetInnerHTML={{ __html: project.acf.services }} />
                 </div>
-                <img src={project.acf.mobile_image.source_url} />
+                <img src={project.acf.mobile_image.localFile.childImageSharp.resize.src} />
                 <div className={styles.listContainer}>
                     <h3 className={styles.heading}>Technologies Used</h3>
                     <div className={styles.list} dangerouslySetInnerHTML={{ __html: project.acf.highlights }} />
@@ -66,7 +66,13 @@ export const pageQuery = graphql`
       title
       content
       featured_media {
-          source_url
+        localFile {
+          childImageSharp {
+            resize(width: 1440) {
+              src
+            }
+          }
+        }
       }
       acf {
         subtitle
@@ -75,10 +81,22 @@ export const pageQuery = graphql`
         services
         site_url
         mobile_image {
-         source_url
+          localFile {
+            childImageSharp {
+              resize(width: 300) {
+                src
+              }
+            }
+          }
         }
         laptop_image {
-         source_url
+          localFile {
+            childImageSharp {
+              resize(width: 1400) {
+                src
+              }
+            }
+          }
         }
       }
     }
