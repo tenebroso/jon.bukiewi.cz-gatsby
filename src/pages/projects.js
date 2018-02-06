@@ -11,7 +11,7 @@ const Projects = ({ data }) => (
         <div key={node.id} className={styles.project}>
           <Link to={`${node.slug}`}>
             <div className={styles.bg} style={{
-                backgroundImage: 'url(' + node.featured_media.source_url + ')'
+                backgroundImage: 'url(' + node.featured_media.localFile.childImageSharp.resize.src + ')'
             }}>
               <div className={styles.titleWrap}>
                 <h3 className={styles.title}>{node.title}</h3>
@@ -35,7 +35,13 @@ export const projectsQuery = graphql`
 		      slug
           title
           featured_media {
-            source_url
+            localFile {
+              childImageSharp {
+                resize(width: 1400) {
+                  src
+                }
+              }
+            }
           }
           acf {
             subtitle
