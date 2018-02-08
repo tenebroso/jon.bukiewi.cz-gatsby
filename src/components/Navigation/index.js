@@ -22,30 +22,24 @@ class Navigation extends Component {
       this.setState({isHovered: false})
   }
 
+  makeLinks(pages) {
+      var _this = this;
+      return pages.map(function(page){
+            return <li onMouseEnter={_this.hoverOver} onMouseLeave={_this.hoverOut}>
+            <a href={`/${page}/`} className={[_this.state.isHovered ? styles.isHovered : '', styles.navLink].join(' ')}>
+                {page}
+            </a>
+        </li>
+      })
+  }
+
   render() {
     return (
     <div>
-        <ul className={styles.nav}>
-            <li onMouseEnter={this.hoverOver} onMouseLeave={this.hoverOut}>
-                <a href="/about/" className={[this.state.isHovered ? styles.isHovered : '', styles.navLink].join(' ')}>
-                    About
-                </a>
-            </li>
-            <li onMouseEnter={this.hoverOver} onMouseLeave={this.hoverOut}>
-                <a href="/blog/" className={[this.state.isHovered ? styles.isHovered : '', styles.navLink].join(' ')}>
-                    Blog
-                </a>
-            </li>
-            <li onMouseEnter={this.hoverOver} onMouseLeave={this.hoverOut}>
-                <a href="/projects/" className={[this.state.isHovered ? styles.isHovered : '', styles.navLink].join(' ')}>
-                    Projects
-                </a>
-            </li>
-            <li onMouseEnter={this.hoverOver} onMouseLeave={this.hoverOut}>
-                <a href="/contact/" className={[this.state.isHovered ? styles.isHovered : '', styles.navLink].join(' ')}>
-                    Contact
-                </a>
-            </li>
+        <ul className={styles.navList}>
+            
+            {this.makeLinks(['about', 'blog', 'projects', 'contact'])}
+
         </ul>
 
         <ul className={styles.icons}>
