@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import styles from './navigation.module.css'
 import TiSocialTwitterCircular from 'react-icons/lib/ti/social-twitter-circular'
 import TiSocialGithubCircular from 'react-icons/lib/ti/social-github-circular'
 import TiSocialAtCircular from 'react-icons/lib/ti/social-at-circular'
+
+import styles from './navigation.module.css'
 
 class Navigation extends Component {
   constructor() {
