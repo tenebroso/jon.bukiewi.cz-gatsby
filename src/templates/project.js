@@ -13,7 +13,6 @@ class ProjectTemplate extends Component {
             }}>
             <div className={styles.headerTitle}>
                 <h1 className={styles.title} dangerouslySetInnerHTML={{ __html: project.title }} />
-                <br />
                 <span className={styles.description} dangerouslySetInnerHTML={{__html: project.acf.subtitle}} />
             </div>
         </div>

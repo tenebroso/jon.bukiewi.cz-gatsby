@@ -13,6 +13,7 @@
     height: 100vh;
     overflow: hidden;
     margin: 0 auto;
+    padding: 3.5rem 1rem 0;
     position: relative;
     transform: translate(0, 0);
     width: 100%;
@@ -40,12 +41,25 @@
     z-index: 20;
 }
 
+@media (min-width: 800px) {
+    .header {
+        padding: 0;
+    }
+}
+
 .title {
-    display: inline;
-    font-size: 4rem;
-    margin: 0;
+    display: block;
+    font-size: 2rem;
+    margin: 0 1rem;
     position: relative;
     z-index: 45;
+}
+
+@media (min-width: 680px) {
+    .title {
+        font-size: 4rem;
+        margin: 0;
+    }
 }
 
 .title:after {
@@ -64,18 +78,25 @@
 .intro {
     background: #141414;
     color: white;
-    height: 100vh;
+    padding: 1rem;
     text-align: center;
     text-shadow: 1px 1px 1px black;
 }
 
-.introText {
-    max-width: 640px;
-    margin: 0 auto;
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
-    line-height: 1.7;
+@media (min-width: 680px) {
+    .intro {
+        height: 100vh;
+        padding: 0;
+    }
+
+    .introText {
+        max-width: 640px;
+        margin: 0 auto;
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+        line-height: 1.7;
+    }
 }
 
 .list ul {
@@ -95,21 +116,14 @@
 }
 
 .listContainer {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 33%;
-    padding-left: 2rem;
-}
-
-.listContainerLeft {
-    padding-left: 0;
-    padding-right: 2rem;
-    text-align: right;
+    margin: 1rem;
+    text-align: center;
 }
 
 .row {
     align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin: 0 auto;
     max-width: 1200px;
@@ -119,7 +133,35 @@
 
 .rowColumn{
     flex-direction: column;
+    word-wrap: break-word
 }
+
+@media (min-width: 800px) {
+    .row {
+        flex-direction: row;
+    }
+
+    .listContainer {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 33%;
+        margin: 0;
+        padding-left: 2rem;
+        text-align: left;
+    }
+    
+    .listContainerLeft {
+        padding-left: 0;
+        padding-right: 2rem;
+        text-align: right;
+    }
+    
+    .rowColumn{
+        word-wrap: normal;
+    }
+}
+
+
 
 .row img {
     max-height: 80vh;
