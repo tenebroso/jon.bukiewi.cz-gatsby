@@ -51,7 +51,6 @@ class ProjectTemplate extends Component {
     )
   }
 }
-//<img src={project.image.sizes.thumbnail} />
 
 ProjectTemplate.propTypes = {
   data: PropTypes.object.isRequired,

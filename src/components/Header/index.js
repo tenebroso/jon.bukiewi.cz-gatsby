@@ -7,7 +7,7 @@ class Header extends Component {
   constructor(props) {
     super(props)
     this.toggleSlide = this.toggleSlide.bind(this)
-    this.handleHover = this.handleHover.bind(this)
+    this.handleHeaderHover = this.handleHeaderHover.bind(this)
     this.state = {
       isActive: false,
       isHovered: false
@@ -18,7 +18,7 @@ class Header extends Component {
     this.setState({ isActive: !this.state.isActive })
   }
 
-  handleHover() {
+  handleHeaderHover() {
     this.setState({isHovered: !this.state.isHovered})
   }
 
@@ -28,12 +28,12 @@ class Header extends Component {
         styles.header, 
         this.state.isActive ? styles.activeHeader : '', 
         this.state.isHovered ? styles.isHovered : ''].join(' ')}
-        onMouseEnter={this.handleHover}
-        onMouseLeave={this.handleHover}>
+        onMouseEnter={this.handleHeaderHover}
+        onMouseLeave={this.handleHeaderHover}>
       <div className={styles.pullDown}>
         <Navigation />
       </div>
-      <Logo handleClick={this.toggleSlide} handleHover={this.handleHover} />
+      <Logo handleClick={this.toggleSlide} handleHover={this.handleHeaderHover} />
     </header>
     )
   }

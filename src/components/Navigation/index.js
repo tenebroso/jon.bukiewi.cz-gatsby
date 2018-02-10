@@ -2,35 +2,36 @@ import React, { Component } from 'react'
 import TiSocialTwitterCircular from 'react-icons/lib/ti/social-twitter-circular'
 import TiSocialGithubCircular from 'react-icons/lib/ti/social-github-circular'
 import TiSocialAtCircular from 'react-icons/lib/ti/social-at-circular'
+import Link from "gatsby-link";
 
 import styles from './navigation.module.css'
 
 class Navigation extends Component {
   constructor() {
     super();
-    this.hoverOver = this.hoverOver.bind(this)
-    this.hoverOut = this.hoverOut.bind(this);
+    this.navHoverOver = this.navHoverOver.bind(this)
+    this.navHoverOut = this.navHoverOut.bind(this);
     this.state = {
-      isHovered: false
+      isNavHovered: false
     }
   }
 
-  hoverOver() {
-    this.setState({isHovered: true})
+  navHoverOver() {
+    this.setState({isNavHovered: true})
   }
 
-  hoverOut() {
-      this.setState({isHovered: false})
+  navHoverOut() {
+    this.setState({isNavHovered: false})
   }
 
   makeLinks(pages) {
-      var _this = this;
-      return pages.map(function(page){
-            return <li onMouseEnter={_this.hoverOver} onMouseLeave={_this.hoverOut}>
-            <a href={`/${page}/`} className={[_this.state.isHovered ? styles.isHovered : '', styles.navLink].join(' ')}>
-                {page}
-            </a>
-        </li>
+      const parent = this;
+      return pages.map(function(page, idx){
+            return <li onMouseEnter={parent.navHoverOver} onMouseLeave={parent.navHoverOut} key={idx}>
+                <Link to={`/${page}/`} className={[parent.state.isNavHovered ? styles.isHovered : '', styles.navLink].join(' ')}>
+                    {page}
+                </Link>
+            </li>
       })
   }
 

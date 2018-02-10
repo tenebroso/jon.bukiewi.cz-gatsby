@@ -28,6 +28,10 @@
     padding: 0 10px;
 }
 
+.icons li a:hover {
+    color: #c1b581;
+}
+
 .icons li a:after {
     display: none;
 }
