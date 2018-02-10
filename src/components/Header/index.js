@@ -31,6 +31,7 @@ class Header extends Component {
         onMouseEnter={this.handleHeaderHover}
         onMouseLeave={this.handleHeaderHover}>
       <div className={styles.pullDown}>
+        <div onClick={this.toggleSlide} onMouseOver={this.handleHeaderHover} className="header-close"><div className="close-btn"><span></span></div></div>
         <Navigation closeNav={this.toggleSlide} />
       </div>
       <Logo handleClick={this.toggleSlide} handleHover={this.handleHeaderHover} />

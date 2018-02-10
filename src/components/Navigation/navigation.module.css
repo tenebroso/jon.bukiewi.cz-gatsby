@@ -1,3 +1,15 @@
+.navList__container {
+    flex: auto;
+    /* align-self: center; */
+    /* margin-top: auto; */
+    /* margin-bottom: auto; */
+    /* justify-self: center; */
+    /* height: auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .navList {
 	list-style-type: none;
     margin: 0;

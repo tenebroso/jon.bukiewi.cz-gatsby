@@ -6,7 +6,7 @@
     position: fixed;
     top: 0;
     transition: transform .35s cubic-bezier(0.135, 1.650, 0.365, 1.070), background-color .35s ease;
-    transform: translate(0, calc(20px - 110vh));
+    transform: translate(0, -90vh);
     width: 100%;
     z-index: 40;
 }
@@ -17,12 +17,12 @@
 
 .activeHeader {
     overflow: visible;
-    transform: translate(0, calc(5% - 20vh));
+    transform: translate(0, 0);
 }
 
 @media (max-width: 480px) {
     .activeHeader {
-        transform: translateY(-69px);
+        transform: translateY(0);
     }
 }
 
@@ -31,8 +31,10 @@
     background: rgb(20, 20, 20);
     color: rgb(255, 255, 255);
     display: flex;
-    height: 110vh;
+    flex-direction: column;
+    height: 94vh;
     justify-content: center;
+    position: relative;
     transition: transform .35s ease-in-out;
     width: 100%;
     z-index: 20;

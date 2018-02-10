@@ -131,11 +131,6 @@
     width: 90%;
 }
 
-.rowColumn{
-    flex-direction: column;
-    word-wrap: break-word
-}
-
 @media (min-width: 800px) {
     .row {
         flex-direction: row;
@@ -155,12 +150,11 @@
         padding-right: 2rem;
         text-align: right;
     }
-    
-    .rowColumn{
-        word-wrap: normal;
-    }
 }
 
+.rowColumn{
+    flex-direction: column;
+}
 
 
 .row img {

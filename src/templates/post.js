@@ -1,13 +1,15 @@
-import React, { Component } from "react"
+import React, { Component } from 'react'
 import Helmet from 'react-helmet'
-import PropTypes from "prop-types"
+import Link from 'gatsby-link';
+import PropTypes from 'prop-types'
+import GoChevronLeft from 'react-icons/lib/go/chevron-left'
 
 class PostTemplate extends Component {
   render() {
     const post = this.props.data.wordpressPost
 
     return (
-      <div className="siteWrap">
+      <div className='siteWrap'>
           <Helmet
           title={`${post.title} / Blog / Jon Bukiewicz`}
           meta={[
@@ -27,8 +29,9 @@ class PostTemplate extends Component {
             { name: 'twitter:title', content: post.title }
           ]}
         />
-        <div className="pageHeader">
-          <h1 className="pageTitle" dangerouslySetInnerHTML={{ __html: post.title }} />
+        <div className='pageHeader'>
+          <h1 className='pageTitle' dangerouslySetInnerHTML={{ __html: post.title }} />
+          <Link to={{pathname: '/blog/'}} className="button__back"><GoChevronLeft className="button__icon" /> Go Back</Link>
         </div>
         <div dangerouslySetInnerHTML={{ __html: post.content }} />
       </div>

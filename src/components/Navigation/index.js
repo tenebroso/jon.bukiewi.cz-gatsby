@@ -28,20 +28,18 @@ class Navigation extends Component {
       const parent = this;
       return pages.map(function(page, idx){
             return <li onMouseEnter={parent.navHoverOver} onMouseLeave={parent.navHoverOut} key={idx}>
-                <Link to={{pathname: `/${page}/`}} onClick={parent.props.closeNav} className={[parent.state.isNavHovered ? styles.isHovered : '', styles.navLink].join(' ')}>
-                    {page}
-                </Link>
-            </li>
+                    <Link to={{pathname: `/${page}/`}} onClick={parent.props.closeNav} className={[parent.state.isNavHovered ? styles.isHovered : '', styles.navLink].join(' ')}>
+                        {page}
+                    </Link>
+                </li>
       })
   }
 
   render() {
     return (
-    <div>
+    <div className={styles.navList__container}>
         <ul className={styles.navList}>
-            
             {this.makeLinks(['about', 'blog', 'projects', 'contact'])}
-
         </ul>
 
         <ul className={styles.icons}>
