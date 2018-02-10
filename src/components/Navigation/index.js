@@ -7,8 +7,8 @@ import Link from "gatsby-link";
 import styles from './navigation.module.css'
 
 class Navigation extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.navHoverOver = this.navHoverOver.bind(this)
     this.navHoverOut = this.navHoverOut.bind(this);
     this.state = {
@@ -28,7 +28,7 @@ class Navigation extends Component {
       const parent = this;
       return pages.map(function(page, idx){
             return <li onMouseEnter={parent.navHoverOver} onMouseLeave={parent.navHoverOut} key={idx}>
-                <Link to={`/${page}/`} className={[parent.state.isNavHovered ? styles.isHovered : '', styles.navLink].join(' ')}>
+                <Link to={{pathname: `/${page}/`}} onClick={parent.props.closeNav} className={[parent.state.isNavHovered ? styles.isHovered : '', styles.navLink].join(' ')}>
                     {page}
                 </Link>
             </li>
