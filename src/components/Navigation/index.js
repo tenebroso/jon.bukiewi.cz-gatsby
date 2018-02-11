@@ -28,7 +28,7 @@ class Navigation extends Component {
       const parent = this;
       return pages.map(function(page, idx){
             return <li onMouseEnter={parent.navHoverOver} onMouseLeave={parent.navHoverOut} key={idx}>
-                    <Link to={{pathname: `/${page}/`}} onClick={parent.props.closeNav} className={[parent.state.isNavHovered ? styles.isHovered : '', styles.navLink].join(' ')}>
+                    <Link to={page === 'home' ? {pathname: `/`} : {pathname: `/${page}/`}} onClick={parent.props.closeNav} className={[parent.state.isNavHovered ? styles.isHovered : '', styles.navLink].join(' ')}>
                         {page}
                     </Link>
                 </li>
@@ -39,7 +39,7 @@ class Navigation extends Component {
     return (
     <div className={styles.navList__container}>
         <ul className={styles.navList}>
-            {this.makeLinks(['about', 'blog', 'projects', 'contact'])}
+            {this.makeLinks(['home', 'blog', 'projects', 'contact'])}
         </ul>
 
         <ul className={styles.icons}>
