@@ -1,37 +1,34 @@
-import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import SiteTitle from '../SiteTitle'
 import styles from './logo.module.css'
 
-class Logo extends Component {
+const Logo = ({
+  handleClick,
+}) => {
+  const [isLogoHovered, setIsLogoHovered] = useState(false);
+  const toggleHovered = () => setIsLogoHovered(!isLogoHovered);
+  const logoSvg = require('../../images/logo.svg');
 
-	constructor(props) {
-		super();
-		this.logoSvg = require('./logo.svg');
-		this.props = props;
-		this.handleLogoHover = this.handleLogoHover.bind(this);
-		this.state = {
-			logoHovered: false
-		}
-	}
+  return (
+    <div className={styles.container}>
+      <button 
+        className={[styles.link, isLogoHovered ? styles.isHovered : ''].join(' ')} 
+        onClick={handleClick} 
+        onMouseEnter={toggleHovered} 
+        onMouseLeave={toggleHovered}>
+        <img
+          src={logoSvg} className={styles.logo}
+          alt="Colophon Logo for Jon Bukiewicz's Personal Site"  
+        />
+      </button>
+      <SiteTitle />
+    </div>
+  )
+};
 
-	handleLogoHover(){
-		this.setState({logoHovered: !this.state.logoHovered})
-	}
+Logo.propTypes = {
+  handleClick: PropTypes.func,
+};
 
-	render(props){
-		return (
-			<div className={styles.container}>
-				<a className={[styles.link, this.state.logoHovered ? styles.isHovered : ''].join(' ')} 
-					onClick={this.props.handleClick} 
-					onMouseEnter={this.handleLogoHover} 
-					onMouseLeave={this.handleLogoHover}>
-					<img src={this.logoSvg} className={styles.logo} />
-				</a>
-				<SiteTitle />
-			</div>
-		)
-	}
-
-}
-
-export default Logo
+export default Logo;

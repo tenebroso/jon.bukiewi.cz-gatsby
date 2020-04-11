@@ -6,11 +6,11 @@ const SiteTitle = () => (
     Jon Bukiewicz &bull;&nbsp;
     <span className={styles.subTitle}>
       Web Solutions Engineer&nbsp;
-    </span> 
+    </span>
     <span className={styles.location}>
       &bull; Chicago, Illinois
     </span>
   </h1>
-)
+);
 
-export default SiteTitle
+export default SiteTitle;
