@@ -7,11 +7,11 @@ const Header = () => {
   const [isActive, setIsActive] = useState(false);
 
   const toggleIsActive = () => setIsActive(!isActive);
+  const headerClasses = [styles.header, isActive ? styles.activeHeader : ''];
 
   return (
-    <header className={[
-      styles.header, 
-      isActive ? styles.activeHeader : ''].join(' ')}
+    <header
+      className={headerClasses.join(' ')}
     >
     <div className={styles.pullDown}>
       <button
