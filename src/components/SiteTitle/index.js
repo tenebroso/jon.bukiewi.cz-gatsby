@@ -8,7 +8,7 @@ const SiteTitle = () => (
       Web Solutions Engineer&nbsp;
     </span>
     <span className={styles.location}>
-      &bull; Chicago, Illinois
+      &bull; Milwaukee, Wisconsin
     </span>
   </h1>
 );
