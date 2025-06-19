@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Jon Bukiewicz',
-    description: `A web developer fron Chicago, focused on Front End and JavaScript development.`,
+    description: `Jon Bukiewicz is a remote Engineering Manager with a strong background in technical leadership, people management, and workplace equity-focused software. Currently leading high-impact engineering teams at Syndio.`,
+    keywords: `Jon Bukiewicz, Engineering Manager, Software Engineering Leader, Technical Leadership, Remote Engineering, Workplace Equity, Syndio, PayEQ, PayFinder, Team Management, Product Development, Full Stack Engineering`,
     author: `@jonbukiewicz`,
   },
   plugins: [
