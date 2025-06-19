@@ -6,13 +6,24 @@ import SEO from "../components/seo";
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <p>Hey, there. Thanks for stopping by!</p>
-    <p>My name is Jon Bukiewicz and I grew up building things on the web.</p>
-    <p>I strive to find solutions by leveraging over 20 years of experience in front end development, project management, user-centric design, and clear communication.</p>
-    <p>I currently work for <a href="https://synd.io/" target="_blank" rel="noopener noreferrer">Syndio</a>, alongside a team of brilliant engineers, to build pay equity software using TypeScript, React, Tailwind and Cypress.</p>
-    <p>I love all things TypeScript, JavaScript, CSS, semantic markup, accessibility and web performance.</p>
-    <p>My experience has ranged from building <a href="https://www.calendow.org/" rel="noopener noreferrer">intricate WordPress sites</a> to <a href="https://mobilising.salvationarmy.org/#!/">AngularJs community engagement portals</a> to e-commerce sites in Magento and Hybris for some of the largest brands in the world.</p>
-    <p>When not helping to move the web forward by working on various exciting projects, I can be found spending time with family, cooking, watching movies, biking, camping, seeking out good coffee or working out.</p>
+    <p>
+      Hey there — I’m Jon Bukiewicz, a remote Engineering Manager with a passion for building great teams and better software.
+      Right now, I lead the team behind two flagship products at <a href="https://synd.io" target="_blank" rel="noopener noreferrer">Syndio</a>,
+      where we’re helping companies tackle pay equity with tools that are powerful, user-friendly, and make a difference.
+      The products I manage bring in nearly 90% of Syndio’s revenue, so I spend a lot of time thinking about scale, reliability, and how to help my team do their best work.
+    </p>
+
+    <p>
+      My background is rooted in frontend engineering, but these days I’m just as focused on strategy, team culture, and mentoring.
+      I’ve led initiatives around AI-assisted tooling, incident response, test automation, and even cut down on meetings by setting up async workflows that work and maintain focus throughout the team.
+      Whether it’s debugging gnarly issues or helping someone grow into their next role, I love the mix of problem-solving and people leadership this job brings.
+    </p>
+
+    <p>
+      Before Syndio, I worked at places like PayPal and Neighborhoods.com,
+      always pushing for cleaner code, better collaboration, and products people actually want to use.
+    </p>
+
     <p>Want to reach out? Send me a <a href="mailto:jon@bukiewi.cz">note</a>.</p>
   </Layout>
 );
