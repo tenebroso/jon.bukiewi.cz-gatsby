@@ -5,7 +5,7 @@ const SiteTitle = () => (
   <h1 className={styles.title}>
     Jon Bukiewicz &bull;&nbsp;
     <span className={styles.subTitle}>
-      Engineering Manager&nbsp;
+      Engineering Manager &amp; Technical Leader&nbsp;
     </span>
     <span className={styles.location}>
       &bull; Milwaukee, Wisconsin
